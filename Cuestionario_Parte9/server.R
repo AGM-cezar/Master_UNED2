@@ -20,7 +20,7 @@ coords2country = function(points) {
   indices$ADMIN  
 }
 
-meteoritos <- as.data.table(read.csv(text = getURL("https://raw.githubusercontent.com/AGM-cezar/Master_UNED2/master/Meteorite_Landings.csv")))
+meteoritos <- as.data.table(read.csv(text = getURL("https://raw.githubusercontent.com/AGM-cezar/Master_UNED2/master/Cuestionario_Parte9/Meteorite_Landings.csv")))
 ImpactsUnfiltered <- na.omit(meteoritos[,.(Impact = name, Mass = mass..g./1000, Year = year, Latitude=reclat, Longitude=reclong)])
 ImpactsUnfiltered[,Year := as.numeric(format(as.Date(substring(ImpactsUnfiltered[,Year],0,10), format="%d/%m/%Y"),"%Y"))]
 ImpactsUnfiltered[,Century := ifelse(as.numeric(substring(Year,0,2))+1 > 21, NA, as.numeric(substring(Year,0,2))+1) ]

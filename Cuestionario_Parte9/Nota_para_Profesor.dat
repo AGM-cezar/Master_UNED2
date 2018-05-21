@@ -1,0 +1,26 @@
+Buenos días,
+
+Le entrego mi aplicación Shiny como prueba de evaluación del módulo de visualización 
+avanzada con los siguientes comentarios:
+
+He encontrado múltiples obstáculos en mi realización de la prueba, y de hecho no está 
+acabada con el nivel de definición que me hubiese gustado. Podría trabajar sobre el data
+set seleccionado durante otras dos semanas sin parar. Considero muy breve el tiempo que 
+se nos ha dado para este módulo considerando el potencial y la cantidad de cosas que 
+pueden hacerse con ello. Es una lástima, pero se me acumulan las materias y tendré que 
+volver sobre ello al final del master.
+
+Los datos son de dominio público y están extraídos del siguiente url:
+    https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh
+Me he hecho una cuenta de GitHub para subir el CSV y mantenerlo accesible en un
+repositorio, de hecho, es de ahí que lo cargo en mi aplicación Shiny.
+
+Tengo ciertas dudas en el mapeado de color del mapa que verá en mi aplicación. Sobre todo
+en la escala de color usada. Países que deberían iluminarse y no lo hacen. He buscado la 
+razón sin encontrarla durante varios días.
+	Si se muestra la Masa total entorno a 1920 (Rango de 1910 a 1930) se puede apreciar que
+	el pico de 60 toneladas de meteoritos están localizadas en Namibia. Pero si se abre el
+	rango de años esta apreciación desaparece. No entiendo por qué.
+
+https://adrian-gm-cezar.shinyapps.io/Cuestionario_Parte9/
+
