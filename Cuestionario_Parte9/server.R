@@ -11,6 +11,7 @@ library(rworldmap)
 library(ggplot2)
 library(data.table)
 library(dplyr)
+library(RCurl)
 
 coords2country = function(points) {  
   countriesSP <- getMap(resolution='low')
@@ -19,7 +20,7 @@ coords2country = function(points) {
   indices$ADMIN  
 }
 
-meteoritos <- as.data.table(read.csv("/Users/Chang/Desktop/Doc/FORMACION/UNED/MASTER_BIG_DATA/VISUALIZACION/Meteorite_Landings.csv"))
+meteoritos <- as.data.table(read.csv(text = getURL("https://raw.githubusercontent.com/AGM-cezar/Master_UNED2/master/Meteorite_Landings.csv")))
 ImpactsUnfiltered <- na.omit(meteoritos[,.(Impact = name, Mass = mass..g./1000, Year = year, Latitude=reclat, Longitude=reclong)])
 ImpactsUnfiltered[,Year := as.numeric(format(as.Date(substring(ImpactsUnfiltered[,Year],0,10), format="%d/%m/%Y"),"%Y"))]
 ImpactsUnfiltered[,Century := ifelse(as.numeric(substring(Year,0,2))+1 > 21, NA, as.numeric(substring(Year,0,2))+1) ]
